@@ -2,11 +2,12 @@ def personal_sum(numbers):
     result  = 0
     incorrect_data = 0
     for number in numbers:
-        try:
-            result += number
-        except TypeError:
-            print(f'Некорректный тип данных для подсчёта суммы - {number}')
-            incorrect_data += 1
+        for number_ in number:
+            try:
+                result += number_
+            except TypeError:
+                print(f'Некорректный тип данных для подсчёта суммы - {number_}')
+                incorrect_data += 1
     return result, incorrect_data
 def calculate_average(numbers):
     try:
